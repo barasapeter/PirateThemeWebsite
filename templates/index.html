@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NeWebDev</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        {% if name == 'Peter' %}
+        <p>Hello, Peter! You are my God! 🙂</p>
+        {% else %}
+        <p>
+            Greetings, digital voyager! Ahoy from the backend realm! Now, listen, if this fine website fails to dazzle
+            your eyes, no worries, me heartie! Alas, I ain't no fancy frontend wizard, sigh... But hey, I hope this
+            silly site manages to conjure a grin on that face of yours! Keep the laughter rolling, matey! 🚀💻😄
+        </p>
+        <img src="{{ url_for('static', filename='image.jpg') }}"
+            alt="A picture to display when the else statement is executed">
+        {% endif %}
+    </div>
+
+    <button onclick="showDialog()">Hey, look here!</button>
+
+    <script>
+        function showDialog() {
+            window.alert("Take this 🖕🏻 you dumb ass nigga 💀 [%if browser.email.logger.surname === 'meshack'%]");
+        }
+    </script>
+</body>
+
+</html>
